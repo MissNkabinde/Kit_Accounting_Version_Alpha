@@ -11,7 +11,12 @@ def user_register():
     emailAddress = emailAddress_entry.get()
     password = password_entry.get()
     conf_password = conf_password_entry.get()
-    import login
+
+    user_window.destroy()
+    import register
+
+def close_windows():
+    user_window.destroy()
 
 
 bold_font = font.Font(family="CASTELLAR", size=18, weight="bold")
@@ -47,7 +52,7 @@ conf_password_label.pack(padx=10, pady=10)
 conf_password_entry = tk.Entry(frame, show="*")
 conf_password_entry.pack(padx=10, pady=10)
 
-register_button = tk.Button(frame, text="Register", command=user_register)
+register_button = tk.Button(frame, text="Continue", command=user_register)
 register_button.pack(padx=10, pady=10)
 
 def close_windows():
